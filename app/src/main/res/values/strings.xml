@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">20190529-SureshKumarKumaravel-NYCSchools</string>
+
+    <string name="dbn">DBN: %s</string>
+    <string name="school_name">School Name: %s</string>
+    <string name="email">Email: %s</string>
+    <string name="phone">Phone: %s</string>
+
+    <string name="sat_detail">SAT Requirement Details:</string>
+    <string name="no_sat_test_takers">Num of Test Takers: %s</string>
+    <string name="sat_critical_reading">Critical Reading AVG Score: %s</string>
+    <string name="sat_math_avg_score">Math AVG Score: %s</string>
+    <string name="sat_writing_avg_score">Writing AVG Score: %s</string>
+
+    <string name="problem_retrieving">Problem Retrieving Data</string>
+    <string name="failed_to_retrieve_SAT_data">Problem retrieving SAT detail.</string>
+</resources>

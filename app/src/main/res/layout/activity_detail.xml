@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="highSchool"
+            type="com.a20190529_sureshkumarkumaravel_nycschools.model.HighSchool" />
+
+        <variable
+            name="schoolSAT"
+            type="com.a20190529_sureshkumarkumaravel_nycschools.model.SchoolSATDetail" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin_space"
+                android:text="@{@string/dbn(highSchool.dbn)}"
+                tools:text="DBN: 02M260" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin_space"
+                android:text="@{highSchool.schoolName}"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="This is the school Name" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin_space"
+                android:text="@{highSchool.description}"
+                tools:text="This is the school description" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin_space"
+                android:text="@{@string/email(highSchool.email)}"
+                tools:text="Email: sss.kkk@g.com" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin_space"
+                android:text="@{@string/phone(highSchool.phone)}"
+                tools:text="Phone: 111 111 1111" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin_space"
+                android:text="@{@string/dbn(highSchool.dbn)}"
+                tools:text="DBN: 02M260" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loading_view"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/text_margin_space"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/snap_loader_black" />
+
+            <TextView
+                android:id="@+id/sat_error_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin"
+                android:gravity="center"
+                android:text="@string/failed_to_retrieve_SAT_data"
+                android:textColor="@android:color/holo_red_light"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/sat_views"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin_space"
+                android:layout_marginBottom="@dimen/text_margin_space"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_margin_space"
+                    android:text="@string/sat_detail"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_margin_space"
+                    android:text="@{@string/no_sat_test_takers(schoolSAT.satTestTakers)}" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_margin_space"
+                    android:text="@{@string/sat_critical_reading(schoolSAT.satReadingAverageScore)}" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_margin_space"
+                    android:text="@{@string/sat_math_avg_score(schoolSAT.satMathAverageScore)}" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_margin_space"
+                    android:text="@{@string/sat_writing_avg_score(schoolSAT.satWritingAverageScore)}" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>
